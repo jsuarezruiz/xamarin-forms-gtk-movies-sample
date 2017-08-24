@@ -2,7 +2,7 @@
 
 **Movies** is a Xamarin.Forms **GTK backend** application that makes use of The Movie Database (TMDb) API, a popular, user editable database for movies and TV shows, to demonstrate the possibilities of the new backend making use of a great variety of functionality.
 
-<img src="Images/movies.png" alt="Movies" Width="800" />
+<img src="images/movies.png" alt="Movies" Width="800" />
 
 ## Xamarin.Forms App 
 
@@ -24,7 +24,7 @@
   
 ## Screens
 
-<img src="Images/movies.png" alt="Home" Width="210" /> <img src="Images/menu.png" alt="Menu" Width="210" /> <img src="Images/discover.png" alt="Discover" Width="210" /> <img src="Images/movie-detail.png" alt="Detail" Width="210" /> <img src="Images/homepage.png" alt="WebView" Width="210" /> <img src="Images/casting01.png" alt="Casting" Width="210" /> <img src="Images/casting02.png" alt="Casting" Width="210" /> <img src="Images/gallery.png" alt="Gallery" Width="210" /> <img src="Images/upcoming.png" alt="Upcoming" Width="210" /> <img src="Images/movies-list.png" alt="Movies" Width="210" /> <img src="Images/shows.png" alt="Shows" Width="210" />
+<img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" />
 
 ## Requirements
 * Windows 10
