@@ -33,6 +33,7 @@
 * [Visual Studio __2015__](https://www.visualstudio.com/en-us/products/vs-2015-product-editions.aspx) Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
 * Xamarin add-ons for Visual Studio 3.2.1.64 or higher (available via the Visual Studio installer)
 * __Visual Studio Community Edition is fully supported!__
+* [The Movie DB Api Key](https://www.themoviedb.org/documentation/api)
 
 ## Setup
 
@@ -42,9 +43,14 @@
 
 Access to **AppSettings.cs** file available in the Portable Class Library to introduce your TMDb APIs key.
 
-
 Enjoy!
 
+## Licenses
+
+This project uses some third-party assets with a license that requires attribution:
+
+- [Flat-Plat](https://github.com/nana-4/Flat-Plat): A Material Design-like theme for GNOME/GTK+ based desktop environments.
+ 
 ## Clean and Rebuild
 
 If you see build issues when pulling updates from the repo, try cleaning and rebuilding the solution.
