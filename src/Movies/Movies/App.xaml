@@ -19,6 +19,7 @@
             
             <!-- CONVERTERS -->
             <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:MenuItemTypeConverter x:Key="MenuItemTypeConverter" />
             <converters:MovieImageConverter x:Key="MovieImageConverter" /> 
             <converters:ReleaseDateConverter x:Key="ReleaseDateConverter" />
             <converters:ToUpperConverter x:Key="ToUpperConverter" />

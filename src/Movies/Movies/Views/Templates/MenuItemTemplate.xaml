@@ -11,20 +11,29 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="Margin" Value="12, 0" />
             </Style>
-            
+
         </ResourceDictionary>
     </ContentView.Resources>
     <ContentView.Content>
         <Grid
             Margin="0, 0, 12, 0">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="48" />
             </Grid.RowDefinitions>
-            <Label 	
+            <Image 
                 Grid.Column="0"
+                Grid.Row="0"
+                Source="{Binding MenuItemType, Converter={StaticResource MenuItemTypeConverter}}"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Label 	
+                Grid.Column="1"   
+                Grid.Row="0"
                 Text="{Binding Title, Converter={StaticResource ToUpperConverter}}"
                 Style="{StaticResource MenuTitleStyle}"/>
         </Grid>

@@ -46,6 +46,7 @@
     <Compile Include="Controls\Rating\RatingStars.cs" />
     <Compile Include="Controls\WrapLayout\WrapLayout.cs" />
     <Compile Include="Converters\InverseBoolConverter.cs" />
+    <Compile Include="Converters\MenuItemTypeConverter.cs" />
     <Compile Include="Converters\MovieImageConverter.cs" />
     <Compile Include="Converters\ReleaseDateConverter.cs" />
     <Compile Include="Converters\ToUpperConverter.cs" />
