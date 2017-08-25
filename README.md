@@ -26,7 +26,7 @@
 
 ## Screens
 
-<img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" />
+<img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" /> <img src="images/loading.png" alt="Loading" Width="210" />
 
 ## Requirements
 
