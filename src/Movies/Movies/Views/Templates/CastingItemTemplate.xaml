@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.Templates.CastingItemTemplate"            
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="CastingImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            
+            <Style x:Key="CastingNameStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="Margin" Value="6, 24" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid
+            BackgroundColor="{StaticResource BackgroundColor}"
+            Margin="0, 0, 12, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image 	
+                Grid.Column="0"
+                Grid.Row="0"
+                Source="{Binding ProfilePath, Converter={StaticResource MovieImageConverter}}"
+                Style="{StaticResource CastingImageStyle}"/>
+            <Label 
+                Grid.Column="0"
+                Grid.Row="0"
+                Text="{Binding Name}"
+                Style="{StaticResource CastingNameStyle}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

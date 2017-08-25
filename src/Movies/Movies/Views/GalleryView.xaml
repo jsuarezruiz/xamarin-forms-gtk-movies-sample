@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.GalleryView"      
+              xmlns:templates="clr-namespace:Movies.Views.Templates;assembly=Movies"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Title="Gallery"
+             ItemsSource="{Binding Images}">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <templates:GalleryItemTemplate />
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

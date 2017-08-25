@@ -29,7 +29,7 @@
 <img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" />
 
 ## Requirements
-* Windows 10
+
 * [Visual Studio __2015__](https://www.visualstudio.com/en-us/products/vs-2015-product-editions.aspx) Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
 * Xamarin add-ons for Visual Studio 3.2.1.64 or higher (available via the Visual Studio installer)
 * __Visual Studio Community Edition is fully supported!__

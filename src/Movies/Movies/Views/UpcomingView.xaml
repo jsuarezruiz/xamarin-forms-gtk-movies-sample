@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.UpcomingView"   
+             xmlns:behaviors="clr-namespace:Movies.Behaviors;assembly=Movies"
+             xmlns:templates="clr-namespace:Movies.Views.Templates;assembly=Movies"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Title="Upcoming">
+    <ContentPage.Content>
+        <Grid>
+            <ListView
+                IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+		        ItemsSource="{Binding Upcoming}" 
+		        SeparatorVisibility="None"
+		        BackgroundColor="{StaticResource BackgroundColor}"
+		        HasUnevenRows="true"                
+                behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding MovieDetailCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <templates:TimelineItemTemplate />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource AccentColor}"
+                BackgroundColor="{StaticResource BackgroundColor}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

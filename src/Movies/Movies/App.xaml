@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
+             xmlns:converters="clr-namespace:Movies.Converters;assembly=Movies"
+             x:Class="Movies.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- GENERAL COLORS -->
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+
+            <!-- THEME COLORS -->
+            <Color x:Key="AccentColor">#F5C210</Color>
+            <Color x:Key="ToolbarColor">#151C25</Color>
+            <Color x:Key="BackgroundColor">#1E2634</Color>
+            <Color x:Key="DarkBackgroundColor">#151C25</Color>
+            <Color x:Key="MenuBackgroundColor">#44545C</Color>
+            
+            <!-- CONVERTERS -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:MovieImageConverter x:Key="MovieImageConverter" /> 
+            <converters:ReleaseDateConverter x:Key="ReleaseDateConverter" />
+            <converters:ToUpperConverter x:Key="ToUpperConverter" />
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

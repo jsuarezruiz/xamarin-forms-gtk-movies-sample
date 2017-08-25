@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.MoviesView"   
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Title="Movies">
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="{StaticResource BackgroundColor}">
+            <ScrollView   
+                IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                BackgroundColor="{StaticResource BackgroundColor}">
+                <controls:WrapLayout 
+                    x:Name="WrapLayout" />
+            </ScrollView>
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource AccentColor}"
+                BackgroundColor="{StaticResource BackgroundColor}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

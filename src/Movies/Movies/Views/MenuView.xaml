@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.MenuView"   
+             xmlns:behaviors="clr-namespace:Movies.Behaviors;assembly=Movies"
+             xmlns:templates="clr-namespace:Movies.Views.Templates;assembly=Movies"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Icon="Images/movies-menu.png"
+             Title=" ">
+    <ContentPage.Content>
+        <Grid>
+            <ListView    
+                BackgroundColor="{StaticResource MenuBackgroundColor}"
+                CachingStrategy="RecycleElement"
+                SeparatorVisibility="None"
+                ItemsSource="{Binding MenuItems}"  
+                behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding ItemSelectedCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <templates:MenuItemTemplate />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

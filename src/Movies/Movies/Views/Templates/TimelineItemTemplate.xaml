@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.Templates.TimelineItemTemplate"            
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid 
+			ColumnSpacing="0" 
+			RowSpacing="0" 
+			Padding="20,0,10,0" 
+			VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <AbsoluteLayout>
+                <BoxView 
+					AbsoluteLayout.LayoutFlags="XProportional, HeightProportional"
+					AbsoluteLayout.LayoutBounds=".5,0,2,1.09"
+					WidthRequest="2" 
+					VerticalOptions="Fill" 
+					HorizontalOptions="FillAndExpand" 
+					BackgroundColor="{StaticResource AccentColor}" />
+            </AbsoluteLayout>
+            <Image
+			    Source="Images/movies-circle.png"
+				HorizontalOptions="Center"
+				Aspect="AspectFit"
+				WidthRequest="48" 
+				HeightRequest="48"
+				VerticalOptions="Center" />
+            <Grid  
+                Grid.Column="1" 
+                BackgroundColor="{StaticResource BackgroundColor}" 
+                VerticalOptions="Center"
+                Margin="12">
+                <Image 		
+                    Source="{Binding PosterPath, Converter={StaticResource MovieImageConverter}}"
+                    Aspect="AspectFit"
+                    WidthRequest="100" 
+				    HeightRequest="100"/>
+            </Grid>
+            <StackLayout
+				Grid.Column="2"
+				VerticalOptions="Center" 
+				Padding="20"
+				Spacing="5">
+                <Label 
+					Text="{Binding Title}" 
+					FontAttributes="Bold" 
+					FontSize="18" 
+					TextColor="{StaticResource WhiteColor}" />
+                <Label   
+                    Text="{Binding ReleaseDate, StringFormat='{0:MMMM d, yyyy}'}}"
+					FontSize="12" 
+					TextColor="{StaticResource AccentColor}"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

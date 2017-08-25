@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.Templates.HomeMainItemTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="HighlightImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill" />
+            </Style>
+
+            <Style x:Key="HighlightGradientImageStyle" TargetType="Image">
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Aspect" Value="Fill" />
+                <Setter Property="Opacity" Value=".75" />
+            </Style>
+
+            <Style x:Key="HighlightTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="HighlightDescriptionStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <Style x:Key="PlayButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Image 
+				Grid.Row="0"
+				Aspect="AspectFill"
+				Source="{Binding Highlight.BackdropPath, Converter={StaticResource MovieImageConverter}, ConverterParameter=Backdrop}" 
+				Style="{StaticResource HighlightImageStyle}"/>
+            <Image 
+				Grid.Row="0" 
+                Source="Images/movies-opacity.png"
+				Style="{StaticResource HighlightGradientImageStyle}" />
+            <Grid
+				Grid.Row="0"
+                RowSpacing="12"
+                Margin="24"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*" />
+                    <ColumnDefinition Width="40*" />
+                </Grid.ColumnDefinitions>
+                <Grid
+					Grid.Column="0"
+					Grid.Row="0"
+					VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label 
+						Grid.Row="0"
+						Text="{Binding Highlight.OriginalTitle}"
+						Style="{StaticResource HighlightTitleStyle}" />
+                </Grid>
+                <Button
+					Grid.Column="0"
+					Grid.Row="1"
+					WidthRequest="200"
+					VerticalOptions="End"
+					HorizontalOptions="Start"
+					Style="{StaticResource PlayButtonStyle}"
+					Text="PLAY TRAILER"
+                    Image="Images/movies-play.png"/>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

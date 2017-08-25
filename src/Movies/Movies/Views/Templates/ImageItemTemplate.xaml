@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.Templates.ImageItemTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="ImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid 
+            WidthRequest="250"
+            BackgroundColor="{StaticResource BackgroundColor}">
+            <Image 	
+                Source="{Binding FilePath, Converter={StaticResource MovieImageConverter}, ConverterParameter=Backdrop}"
+                Style="{StaticResource ImageStyle}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.DetailView"   
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies"
+             xmlns:templates="clr-namespace:Movies.Views.Templates;assembly=Movies"
+             BackgroundColor="{StaticResource DarkBackgroundColor}"
+             Title="{Binding Movie.Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="MovieTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+            
+            <Style x:Key="ReleaseDateStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Color x:Key="VoteCountColor">#939CAE</Color>
+
+            <Style x:Key="VoteCountStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource VoteCountColor}" />
+                <Setter Property="FontSize" Value="10" />
+            </Style>
+
+            <Style x:Key="VoteAverageStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="Margin" Value="12, 0, 24, 0" />
+            </Style>
+
+            <Color x:Key="TitleColor">#5D6576</Color>
+
+            <Style x:Key="StorylineTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TitleColor}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="StorylineStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackgroundColor}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="12, 0" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+            
+            <Style x:Key="PlayButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+
+            <Style x:Key="HomepageButtonStyle" TargetType="Button" BasedOn="{StaticResource PlayButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView   
+                IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                BackgroundColor="{StaticResource DarkBackgroundColor}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!-- MOVIE PICTURE -->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image 
+                            Grid.Row="0"
+                            Grid.RowSpan="4"
+					        Source="{Binding Movie.BackdropPath, Converter={StaticResource MovieImageConverter}, ConverterParameter=Backdrop}" 
+					        Aspect="AspectFill" />
+                        <Image  
+                            Grid.Row="0"
+                            Grid.RowSpan="4"
+					        Source="Images/movies-opacity.png" 
+					        Aspect="AspectFill" />
+                        <Grid
+                            Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- YEAR -->
+                            <Label 
+                                Grid.Column="0"
+                                Text="{Binding Movie.ReleaseDate, Converter={StaticResource ReleaseDateConverter}}"
+                                Style="{StaticResource ReleaseDateStyle}"/>
+                            <!-- VOTES -->
+                            <Grid 
+                                Grid.Column="2"
+                                VerticalOptions="End">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="12" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <controls:RatingStars
+                                    Grid.Row="0"
+                                    Rating="{Binding Movie.VoteAverage}"
+                                    Precision="Half"
+                                    HeightRequest="12"
+                                    WidthRequest="150"/>
+                                <Grid  
+                                    Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label 
+                                        Grid.Column="0"
+                                        Text="{Binding Movie.VoteCount}"
+                                        Style="{StaticResource VoteCountStyle}"/>
+                                    <Label 
+                                        Grid.Column="1"
+                                        Text="VOTES"
+                                        Style="{StaticResource VoteCountStyle}"/>
+                                </Grid>
+                            </Grid>
+                            <!-- VOTE AVERAGE -->
+                            <Label 
+                                Grid.Column="3"
+                                Text="{Binding Movie.VoteAverage}"
+                                Style="{StaticResource VoteAverageStyle}"/>
+                        </Grid>
+                        <Grid
+                            Grid.Row="2">
+                            <Label 
+                                Text="{Binding Movie.Title}"
+                                Style="{StaticResource MovieTitleStyle}"/>
+                        </Grid>
+                        <Grid
+                            Grid.Row="3">
+                        </Grid>
+                    </Grid>
+                    <!-- MOVIE STORYLINE -->
+                    <Grid
+                        Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Row="0"
+                            Text="STORYLINE"
+                            Style="{StaticResource StorylineTitleStyle}"/>
+                        <Label 
+                            Grid.Row="1"
+                            Text="{Binding Movie.Overview}"
+                            Style="{StaticResource StorylineStyle}"/>
+                        <Grid	
+                            Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                Grid.Column="0"
+					            WidthRequest="200"
+					            Style="{StaticResource PlayButtonStyle}"
+					            Text="PLAY TRAILER"
+                                Image="Images/movies-play.png"
+                                Command="{Binding PlayCommand}"/>
+                            <Button
+                                Grid.Column="1"
+					            WidthRequest="200"
+					            Style="{StaticResource HomepageButtonStyle}"
+					            Text="HOMEPAGE" 
+                                Image="Images/movies-web.png"
+                                Command="{Binding HomepageCommand}"/>
+                        </Grid>
+                    </Grid>
+                    <!-- ACTORS -->
+                    <Grid
+                        Grid.Row="2"
+                        BackgroundColor="{StaticResource DarkBackgroundColor}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Row="0"
+                            Text="ACTORS"
+                            Style="{StaticResource StorylineTitleStyle}"/>
+                        <controls:HorizontalList  
+                            Grid.Row="1"
+                            ListOrientation="Horizontal" 
+                            BackgroundColor="{StaticResource DarkBackgroundColor}"
+                            ItemsSource="{Binding Casting}" 
+                            SelectedCommand="{Binding PeopleDetailCommand}"
+                            VerticalOptions="Start"
+                            Margin="12, 0, 12, 24">
+                            <controls:HorizontalList.ItemTemplate>
+                                <DataTemplate>
+                                    <templates:CastingItemTemplate />
+                                </DataTemplate>
+                            </controls:HorizontalList.ItemTemplate>
+                        </controls:HorizontalList>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource AccentColor}"
+                BackgroundColor="{StaticResource BackgroundColor}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

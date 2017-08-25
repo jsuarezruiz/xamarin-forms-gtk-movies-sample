@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.SplashView"   
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Title="Movies">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="SplashBackgroundColor">#151C25</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+<ContentPage.Content>
+        <Grid
+            BackgroundColor="{StaticResource SplashBackgroundColor}">
+            <Image
+                Source="ImAGES/movies-icon.png"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

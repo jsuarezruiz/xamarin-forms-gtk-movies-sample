@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.PeopleView"   
+             xmlns:behaviors="clr-namespace:Movies.Behaviors;assembly=Movies"
+             xmlns:controls="clr-namespace:Movies.Controls;assembly=Movies" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             BackgroundColor="{StaticResource ToolbarColor}"
+             Title="{Binding Person.Name}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="TitleColor">#5D6576</Color>
+            <Color x:Key="TranslucidToolbarColor">#44000000</Color>
+            <Color x:Key="LightPeopleBackgroundColor">#1E2634</Color>
+
+            <Style x:Key="PersonNameStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="PersonBiographyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+
+            <Style x:Key="SmallSeparatortStyle" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="4" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="WidthRequest" Value="40" />
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="PopularityStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="Margin" Value="12, 0, 24, 0" />
+            </Style>
+
+            <Style x:Key="ToolbarStyle" TargetType="Grid">
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="ColumnSpacing" Value="0" />
+            </Style>
+
+            <Style x:Key="ToolbarTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Margin" Value="6, 0" />
+            </Style>
+
+            <Style x:Key="PeopleTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TitleColor}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="HomepageButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView  
+                IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                BackgroundColor="{StaticResource DarkBackgroundColor}">
+                <Grid
+                    RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="600"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!-- CAST PICTURE -->
+                    <Grid 
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="36" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image 
+                            Grid.Row="0"
+                            Grid.RowSpan="5"
+					        Source="{Binding Person.ProfilePath, Converter={StaticResource MovieImageConverter}, ConverterParameter=Backdrop}" 
+					        Aspect="AspectFill" />
+                        <Image  
+                            Grid.Row="0"
+                            Grid.RowSpan="5"
+					        Source="Images/movies-opacity.png" 
+					        Aspect="AspectFill" />
+                        <Label 
+                            Grid.Row="1"
+                            Text="{Binding Person.Popularity}"
+                            Style="{StaticResource PopularityStyle}"/>
+                        <Label 
+                            Grid.Row="2"
+                            Text="{Binding Person.Name}"
+                            Style="{StaticResource PersonNameStyle}"/>
+                        <BoxView  
+                            Grid.Row="3"
+                            Style="{StaticResource SmallSeparatortStyle}"/>
+                        <Label 
+                            Grid.Row="4"
+                            Text="{Binding Person.Biography}"
+                            Style="{StaticResource PersonBiographyStyle}"/>
+                        <Grid  
+                            Grid.Row="5"
+						    Style="{StaticResource ToolbarStyle}" 
+						    BackgroundColor="{StaticResource TranslucidToolbarColor}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid
+							    Grid.Column="0"
+                                Grid.ColumnSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Grid.Column="0"
+                                    Source="Images/movies-cake.png"
+                                    Aspect="AspectFit"/>
+                                <Label  
+                                    Grid.Column="1"
+                                    Text="{Binding Person.Birthday, StringFormat='{0:MMMM d, yyyy}'}}"
+                                    WidthRequest="200"
+                                    Style="{StaticResource ToolbarTextStyle}"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <!-- MAP -->
+                    <Grid 
+                        Grid.Row="1"
+                        RowSpacing="0"
+                        BackgroundColor="{StaticResource LightPeopleBackgroundColor}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <!--
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="MORE INFO"
+                            Style="{StaticResource PeopleTitleStyle}"/>
+                        <Button 
+                            Grid.Column="0"
+                            Grid.Row="1"
+					        WidthRequest="200"
+					        Style="{StaticResource HomepageButtonStyle}"
+					        Text="HOMEPAGE" 
+                            Image="Images/movies-web.png"
+                            Command="{Binding HomepageCommand}"/>
+                        -->
+                        <maps:Map  
+                            Grid.Column="0" 
+                            Grid.ColumnSpan="2"
+                            Grid.Row="1"
+                            MapType="Hybrid"
+                            HeightRequest="300">
+                            <maps:Map.Behaviors>
+                                <behaviors:MapBehavior 
+                                    ItemsSource="{Binding Positions}" />
+                            </maps:Map.Behaviors>
+                        </maps:Map>
+                        <Image  
+                            Grid.Column="0" 
+                            Grid.ColumnSpan="2"
+                            Grid.Row="1"
+					        Source="Images/movies-opacity.png" 
+					        Aspect="AspectFill" />
+                    </Grid>
+                    <!-- GALLERY -->
+                    <Grid 
+                        Grid.Row="2"
+                        RowSpacing="0"
+                        BackgroundColor="{StaticResource LightPeopleBackgroundColor}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Row="0"
+                            Text="GALLERY"
+                            Style="{StaticResource PeopleTitleStyle}"/>
+                        <controls:WrapLayout   
+                            Grid.Row="1"
+                            x:Name="WrapLayout" />
+                    </Grid>
+                </Grid>
+            </ScrollView>
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="{StaticResource AccentColor}"
+                BackgroundColor="{StaticResource BackgroundColor}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
