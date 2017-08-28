@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps.GTK;
 using Xamarin.Forms.Platform.GTK;
@@ -11,6 +12,8 @@ namespace Movies.GTK
         [STAThread]
         static void Main(string[] args)
         {
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+
             GtkThemes.Init();
 
             if (PlatformHelper.GetGTKPlatform() == GTKPlatform.Windows)
