@@ -26,6 +26,12 @@
 
 ## Screens
 
+### Linux
+
+<img src="images/discover-linux.png" alt="Home on Linux (Ubuntu)" Width="210" /> <img src="images/menu-linux.png" alt="Menu on Linux (Ubuntu)" Width="210" /> <img src="images/movie-detail-linux.png" alt="Detail on Linux (Ubuntu)" Width="210" /> <img src="images/casting01-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/casting02-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/upcoming-linux.png" alt="Upcoming on Linux (Ubuntu)" Width="210" /> <img src="images/movies-linux.png" alt="Movies on Linux (Ubuntu)" Width="210" /> <img src="images/shows-linux.png" alt="Shows on Linux (Ubuntu)" Width="210" />
+ 
+### Windows
+
 <img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" /> <img src="images/loading.png" alt="Loading" Width="210" />
 
 ## Requirements
