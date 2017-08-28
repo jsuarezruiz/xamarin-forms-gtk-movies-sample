@@ -21,15 +21,6 @@
         <Grid
             BackgroundColor="{StaticResource BackgroundColor}"
             Margin="0, 0, 12, 0">
-            <Grid.Triggers>
-                <DataTrigger
-                    TargetType="Grid"
-                    Binding="{Binding IsEnabled, Mode=TwoWay}"
-                    Value="False">
-                    <Setter Property="Opacity"        
-                            Value="0.6" />
-                </DataTrigger>
-            </Grid.Triggers>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200" />
             </Grid.ColumnDefinitions>
