@@ -7,7 +7,8 @@
              BackgroundColor="{StaticResource ToolbarColor}"
              Title="Upcoming">
     <ContentPage.Content>
-        <Grid>
+        <Grid
+            BackgroundColor="{StaticResource BackgroundColor}">
             <ListView
                 IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
 		        ItemsSource="{Binding Upcoming}" 

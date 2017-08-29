@@ -12,7 +12,7 @@
 
         </ResourceDictionary>
     </ContentPage.Resources>
-<ContentPage.Content>
+    <ContentPage.Content>
         <Grid
             BackgroundColor="{StaticResource SplashBackgroundColor}">
             <Image

@@ -6,7 +6,8 @@
              BackgroundColor="{StaticResource ToolbarColor}"
              Title="Shows">
     <ContentPage.Content>
-        <Grid>
+        <Grid
+            BackgroundColor="{StaticResource BackgroundColor}">
             <ScrollView    
                 IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
                 BackgroundColor="{StaticResource BackgroundColor}">

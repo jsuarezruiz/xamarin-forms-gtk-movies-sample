@@ -75,7 +75,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid
+            BackgroundColor="{StaticResource BackgroundColor}">
             <ScrollView  
                 IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
                 BackgroundColor="{StaticResource DarkBackgroundColor}">
