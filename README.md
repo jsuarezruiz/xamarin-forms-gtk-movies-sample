@@ -20,6 +20,8 @@
   * [MVVM](https://developer.xamarin.com/guides/xamarin-forms/xaml/xaml-basics/data_bindings_to_mvvm/)
   * [Styles](https://developer.xamarin.com/guides/xamarin-forms/user-interface/styles/)
   * Triggers
+  * Dialogs
+  * Navigation
   * Gtk Themes
   
 <img src="images/movies.gif" alt="Movies" />
