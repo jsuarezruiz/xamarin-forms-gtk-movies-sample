@@ -14,7 +14,8 @@
 		        ItemsSource="{Binding Upcoming}" 
 		        SeparatorVisibility="None"
 		        BackgroundColor="{StaticResource BackgroundColor}"
-		        HasUnevenRows="true"                
+		        HasUnevenRows="false"               
+                RowHeight="120"
                 behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding MovieDetailCommand}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
