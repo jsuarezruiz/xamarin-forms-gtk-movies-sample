@@ -32,7 +32,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="12" />
             </Grid.RowDefinitions>
             <Image 	
