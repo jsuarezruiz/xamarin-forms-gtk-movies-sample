@@ -14,17 +14,47 @@ namespace Movies.Converters
             switch (menuItemType)
             {
                 case MenuItemType.Discover:
-                    return "Images/movies-discover.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-discover.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-discover.png";
+                    else
+                        return string.Empty;
                 case MenuItemType.Movies:
-                    return "Images/movies-movie.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-movie.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-movie.png";
+                    else
+                        return string.Empty;
                 case MenuItemType.TVShows:
-                    return "Images/movies-shows.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-shows.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-shows.png";
+                    else
+                        return string.Empty;
                 case MenuItemType.Upcoming:
-                    return "Images/movies-upcoming.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-upcoming.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-upcoming.png";
+                    else
+                        return string.Empty;
                 case MenuItemType.Favourites:
-                    return "Images/movies-favourites.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-favourites.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-favourites.png";
+                    else
+                        return string.Empty;
                 case MenuItemType.Settings:
-                    return "Images/movies-settings.png";
+                    if (Device.RuntimePlatform == Device.GTK)
+                        return "Images/movies-settings.png";
+                    else if (Device.RuntimePlatform == Device.UWP)
+                        return "Assets/movies-settings.png";
+                    else
+                        return string.Empty;
                 default:
                     return string.Empty;
             }

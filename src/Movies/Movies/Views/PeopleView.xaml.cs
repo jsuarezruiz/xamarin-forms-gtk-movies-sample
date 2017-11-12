@@ -25,9 +25,9 @@ namespace Movies.Views
 
                     var tapGestureRecognizer = new TapGestureRecognizer();
 
-                    tapGestureRecognizer.Tapped += (s, a) =>
+                    tapGestureRecognizer.Tapped += async (s, a) =>
                     {
-                        ((PeopleViewModel)BindingContext).GalleryAsync(profile);
+                        await ((PeopleViewModel)BindingContext).GalleryAsync(profile);
                     };
 
                     movieItemTemplate.GestureRecognizers.Add(tapGestureRecognizer);

@@ -29,12 +29,18 @@
 					BackgroundColor="{StaticResource AccentColor}" />
             </AbsoluteLayout>
             <Image
-			    Source="Images/movies-circle.png"
 				HorizontalOptions="Center"
 				Aspect="AspectFit"
 				WidthRequest="48" 
 				HeightRequest="48"
-				VerticalOptions="Center" />
+				VerticalOptions="Center">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="GTK" Value="Images/movies-circle.png"/>
+                        <On Platform="UWP" Value="Assets/movies-circle.png"/>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
             <Grid  
                 Grid.Column="1" 
                 BackgroundColor="{StaticResource BackgroundColor}" 

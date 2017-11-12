@@ -21,8 +21,14 @@
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Icon="Images/movies-search.png"
-            Text="Search"/>
+            Text="Search">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="GTK" Value="Images/movies-search.png"/>
+                    <On Platform="UWP" Value="Assets/movies-search.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid>

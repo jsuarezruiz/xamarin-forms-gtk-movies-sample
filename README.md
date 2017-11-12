@@ -31,8 +31,12 @@
 ### Linux
 
 <img src="images/discover-linux.png" alt="Home on Linux (Ubuntu)" Width="210" /> <img src="images/menu-linux.png" alt="Menu on Linux (Ubuntu)" Width="210" /> <img src="images/movie-detail-linux.png" alt="Detail on Linux (Ubuntu)" Width="210" /> <img src="images/casting01-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/casting02-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/upcoming-linux.png" alt="Upcoming on Linux (Ubuntu)" Width="210" /> <img src="images/movies-linux.png" alt="Movies on Linux (Ubuntu)" Width="210" /> <img src="images/shows-linux.png" alt="Shows on Linux (Ubuntu)" Width="210" />
+
+#UWP
  
-### Windows
+<img src="images/discover-uwp.png" alt="Home" Width="210" /> <img src="images/menu-uwp.png" alt="Menu" Width="210" /> <img src="images/movie-detail-uwp.png" alt="Detail" Width="210" /> <img src="images/upcoming-uwp.png" alt="Upcoming" Width="210" /> <img src="images/movies-uwp.png" alt="Movies" Width="210" /> <img src="images/shows-uwp.png" alt="Shows" Width="210" />
+
+### Windows (Gtk Backend - Windows XP, 7, 8 & 10)
 
 <img src="images/movies.png" alt="Home" Width="210" /> <img src="images/menu.png" alt="Menu" Width="210" /> <img src="images/discover.png" alt="Discover" Width="210" /> <img src="images/movie-detail.png" alt="Detail" Width="210" /> <img src="images/homepage.png" alt="WebView" Width="210" /> <img src="images/casting01.png" alt="Casting" Width="210" /> <img src="images/casting02.png" alt="Casting" Width="210" /> <img src="images/gallery.png" alt="Gallery" Width="210" /> <img src="images/upcoming.png" alt="Upcoming" Width="210" /> <img src="images/movies-list.png" alt="Movies" Width="210" /> <img src="images/shows.png" alt="Shows" Width="210" /> <img src="images/loading.png" alt="Loading" Width="210" />
 
