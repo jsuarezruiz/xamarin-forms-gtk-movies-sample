@@ -28,6 +28,14 @@
 
 ## Screens
 
+### Android
+
+<img src="images/discover-droid.png" alt="Home" Width="210" /> <img src="images/menu-droid.png" alt="Menu" Width="210" /> <img src="images/movie-detail-droid.png" alt="Detail" Width="210" /> <img src="images/upcoming-droid.png" alt="Upcoming" Width="210" /> <img src="images/movies-droid.png" alt="Movies" Width="210" />
+
+### iOS
+
+<img src="images/discover-iOS.png" alt="Home" Width="210" /> <img src="images/menu-iOS.png" alt="Menu" Width="210" /> <img src="images/movie-detail-iOS.png" alt="Detail" Width="210" /> <img src="images/upcoming-iOS.png" alt="Upcoming" Width="210" /> <img src="images/movies-iOS.png" alt="Movies" Width="210" />
+
 ### Linux
 
 <img src="images/discover-linux.png" alt="Home on Linux (Ubuntu)" Width="210" /> <img src="images/menu-linux.png" alt="Menu on Linux (Ubuntu)" Width="210" /> <img src="images/movie-detail-linux.png" alt="Detail on Linux (Ubuntu)" Width="210" /> <img src="images/casting01-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/casting02-linux.png" alt="Casting on Linux (Ubuntu)" Width="210" /> <img src="images/upcoming-linux.png" alt="Upcoming on Linux (Ubuntu)" Width="210" /> <img src="images/movies-linux.png" alt="Movies on Linux (Ubuntu)" Width="210" /> <img src="images/shows-linux.png" alt="Shows on Linux (Ubuntu)" Width="210" />

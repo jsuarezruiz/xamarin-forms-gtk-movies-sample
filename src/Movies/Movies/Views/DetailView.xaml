@@ -188,10 +188,16 @@
                             </Grid.ColumnDefinitions>
                             <Button
                                 Grid.Column="0"
-					            WidthRequest="200"
 					            Style="{StaticResource PlayButtonStyle}"
 					            Text="PLAY TRAILER" 
                                 Command="{Binding PlayCommand}">
+                                <Button.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android, iOS" Value="150"/>
+                                        <On Platform="GTK" Value="200"/>
+                                        <On Platform="UWP" Value="200"/>
+                                    </OnPlatform>
+                                </Button.WidthRequest>
                                 <Button.Image>
                                     <OnPlatform x:TypeArguments="FileImageSource">
                                         <On Platform="Android, iOS" Value="movies_web"/>
@@ -202,10 +208,16 @@
                             </Button>
                             <Button
                                 Grid.Column="1"
-					            WidthRequest="200"
 					            Style="{StaticResource HomepageButtonStyle}"
 					            Text="HOMEPAGE" 
                                 Command="{Binding HomepageCommand}">
+                                <Button.WidthRequest>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <On Platform="Android, iOS" Value="150"/>
+                                        <On Platform="GTK" Value="200"/>
+                                        <On Platform="UWP" Value="200"/>
+                                    </OnPlatform>
+                                </Button.WidthRequest>
                                 <Button.Image>
                                     <OnPlatform x:TypeArguments="FileImageSource">
                                         <On Platform="Android, iOS" Value="movies_web"/>
