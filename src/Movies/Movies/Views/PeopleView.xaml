@@ -109,6 +109,7 @@
 					        Aspect="AspectFill">
                             <Image.Source>
                                 <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, iOS" Value="movies_opacity"/>
                                     <On Platform="GTK" Value="Images/movies-opacity.png"/>
                                     <On Platform="UWP" Value="Assets/movies-opacity.png"/>
                                 </OnPlatform>
@@ -151,6 +152,7 @@
                                     Aspect="AspectFit">
                                     <Image.Source>
                                         <OnPlatform x:TypeArguments="ImageSource">
+                                            <On Platform="Android, iOS" Value="movies_cake"/>
                                             <On Platform="GTK" Value="Images/movies-cake.png"/>
                                             <On Platform="UWP" Value="Assets/movies-cake.png"/>
                                         </OnPlatform>
@@ -207,8 +209,15 @@
                             Grid.Column="0" 
                             Grid.ColumnSpan="2"
                             Grid.Row="1"
-					        Source="Images/movies-opacity.png" 
-					        Aspect="AspectFill" />
+					        Aspect="AspectFill">
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, iOS" Value="movies_opacity"/>
+                                    <On Platform="GTK" Value="Images/movies-opacity.png"/>
+                                    <On Platform="UWP" Value="Assets/movies-opacity.png"/>
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
                     </Grid>
                     <!-- GALLERY -->
                     <Grid 

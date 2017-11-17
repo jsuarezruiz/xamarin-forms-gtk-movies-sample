@@ -16,10 +16,17 @@
         <Grid
             BackgroundColor="{StaticResource SplashBackgroundColor}">
             <Image
-                Source="Images/movies-icon.png"
                 Aspect="AspectFit"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="Android, iOS" Value="movies_icon"/>
+                        <On Platform="GTK" Value="Images/movies-icon.png"/>
+                        <On Platform="UWP" Value="Assets/movies-icon.png"/>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

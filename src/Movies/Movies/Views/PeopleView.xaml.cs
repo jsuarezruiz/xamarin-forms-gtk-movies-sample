@@ -20,8 +20,10 @@ namespace Movies.Views
                 var profiles = arg as ObservableCollection<Profile>;
                 foreach (var profile in profiles)
                 {
-                    var movieItemTemplate = new ImageItemTemplate();
-                    movieItemTemplate.BindingContext = profile;
+                    var movieItemTemplate = new ImageItemTemplate
+                    {
+                        BindingContext = profile
+                    };
 
                     var tapGestureRecognizer = new TapGestureRecognizer();
 

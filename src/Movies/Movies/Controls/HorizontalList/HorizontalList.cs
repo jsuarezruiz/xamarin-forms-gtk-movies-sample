@@ -151,6 +151,7 @@ namespace Movies.Controls
         private static void OnSelectedItemChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var itemsView = (HorizontalList)bindable;
+
             if (newValue == oldValue && newValue != null)
             {
                 return;

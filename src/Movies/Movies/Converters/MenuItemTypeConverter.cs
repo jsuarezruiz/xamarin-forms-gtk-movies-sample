@@ -18,6 +18,8 @@ namespace Movies.Converters
                         return "Images/movies-discover.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-discover.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_discover";
                     else
                         return string.Empty;
                 case MenuItemType.Movies:
@@ -25,6 +27,8 @@ namespace Movies.Converters
                         return "Images/movies-movie.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-movie.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_movie";
                     else
                         return string.Empty;
                 case MenuItemType.TVShows:
@@ -32,6 +36,8 @@ namespace Movies.Converters
                         return "Images/movies-shows.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-shows.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_shows";
                     else
                         return string.Empty;
                 case MenuItemType.Upcoming:
@@ -39,6 +45,8 @@ namespace Movies.Converters
                         return "Images/movies-upcoming.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-upcoming.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_upcoming";
                     else
                         return string.Empty;
                 case MenuItemType.Favourites:
@@ -46,6 +54,8 @@ namespace Movies.Converters
                         return "Images/movies-favourites.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-favourites.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_favourites";
                     else
                         return string.Empty;
                 case MenuItemType.Settings:
@@ -53,6 +63,8 @@ namespace Movies.Converters
                         return "Images/movies-settings.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-settings.png";
+                    else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+                        return "movies_settings";
                     else
                         return string.Empty;
                 default:
