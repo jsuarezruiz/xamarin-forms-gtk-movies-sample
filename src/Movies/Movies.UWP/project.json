@@ -1,11 +1,12 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xamarin.Forms": "3.0.0.201-gtk",
-    "Xamarin.Forms.Maps": "2.5.0.91635"
+    "Autofac": "4.6.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
+    "Xamarin.Forms": "2.6.0.103191-nightly",
+    "Xamarin.Forms.Maps": "2.6.0.103191-nightly"
   },
   "frameworks": {
-    "uap10.0.10586": {}
+    "uap10.0.16299": {}
   },
   "runtimes": {
     "win10-arm": {},

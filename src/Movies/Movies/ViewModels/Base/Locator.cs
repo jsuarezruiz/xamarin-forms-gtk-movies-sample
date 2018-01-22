@@ -1,4 +1,4 @@
-﻿using Microsoft.Practices.Unity;
+﻿using Autofac;
 using Movies.Services.Movies;
 using Movies.Services.Navigation;
 using Movies.Services.People;
@@ -10,7 +10,7 @@ namespace Movies.ViewModels.Base
 {
     public class Locator
     {
-        private readonly IUnityContainer _container;
+        private static IContainer _container;
 
         private static readonly Locator _instance = new Locator();
 
@@ -24,25 +24,32 @@ namespace Movies.ViewModels.Base
 
         protected Locator()
         {
-            _container = new UnityContainer();
+            var builder = new ContainerBuilder();
 
-            _container.RegisterType<IRequestService, RequestService>();
-            _container.RegisterType<IMoviesService, MoviesService>();
-            _container.RegisterType<INavigationService, NavigationService>();
-            _container.RegisterType<IPeopleService, PeopleService>();
-            _container.RegisterType<ITVShowService, TVShowService>();
+            builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
+            builder.RegisterType<RequestService>().As<IRequestService>();
+            builder.RegisterType<MoviesService>().As<IMoviesService>();
+            builder.RegisterType<PeopleService>().As<IPeopleService>();
+            builder.RegisterType<TVShowService>().As<ITVShowService>();
 
-            _container.RegisterType<DetailViewModel>();
-            _container.RegisterType<GalleryViewModel>();
-            _container.RegisterType<MoviesViewModel>();
-            _container.RegisterType<MenuViewModel>();
-            _container.RegisterType<MainViewModel>();
-            _container.RegisterType<HomeViewModel>();
-            _container.RegisterType<HomepageViewModel>();
-            _container.RegisterType<PeopleViewModel>();
-            _container.RegisterType<ShowsViewModel>();
-            _container.RegisterType<SplashViewModel>();
-            _container.RegisterType<UpcomingViewModel>();
+            builder.RegisterType<DetailViewModel>();
+            builder.RegisterType<GalleryViewModel>();
+            builder.RegisterType<MoviesViewModel>();
+            builder.RegisterType<MenuViewModel>();
+            builder.RegisterType<MainViewModel>();
+            builder.RegisterType<HomeViewModel>();
+            builder.RegisterType<HomepageViewModel>();
+            builder.RegisterType<PeopleViewModel>();
+            builder.RegisterType<ShowsViewModel>();
+            builder.RegisterType<SplashViewModel>();
+            builder.RegisterType<UpcomingViewModel>();
+
+            if (_container != null)
+            {
+                _container.Dispose();
+            }
+
+            _container = builder.Build();
         }
 
         public T Resolve<T>()
