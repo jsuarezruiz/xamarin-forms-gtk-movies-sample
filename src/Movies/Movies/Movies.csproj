@@ -8,7 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="2.6.0.103191-nightly" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="2.6.0.103191-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="2.6.0.143689-nightly" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="2.6.0.143689-nightly" />
   </ItemGroup>
 </Project>
