@@ -55,14 +55,6 @@
 * __Visual Studio Community Edition is fully supported!__
 * [The Movie DB Api Key](https://www.themoviedb.org/documentation/api)
 
-## Xamarin.Forms 3.0 Feed
-
-The **Xamarin.Forms 3.0** preview is published to a custom NuGet feed. To get it:
-
-- Add a new source to your NuGet Manager: [https://www.myget.org/F/xamarinforms-dev/api/v3/index.json](https://www.myget.org/F/xamarinforms-dev/api/v3/index.json).
-- Check Pre-Release.
-- Select and install the package with the  name **3.0.0.201-gtk**.
-
 ## Setup
 
 **Download** or clone the repository. This is a solution with two projects.
