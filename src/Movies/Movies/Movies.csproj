@@ -7,8 +7,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.320178-nightly" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="3.1.0.320178-nightly" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.296286-pre2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.0.0.296286-pre2" />
   </ItemGroup>
 </Project>

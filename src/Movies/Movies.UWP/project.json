@@ -2,8 +2,8 @@
   "dependencies": {
     "Autofac": "4.6.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
-    "Xamarin.Forms": "3.1.0.320178-nightly",
-    "Xamarin.Forms.Maps": "3.1.0.320178-nightly"
+    "Xamarin.Forms": "3.0.0.296286-pre2",
+    "Xamarin.Forms.Maps": "3.0.0.296286-pre2"
   },
   "frameworks": {
     "uap10.0.16299": {}
