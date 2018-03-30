@@ -22,7 +22,7 @@
                 <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="Android, iOS" Value="movies_icon"/>
-                        <On Platform="GTK" Value="Images/movies-icon.png"/>
+                        <On Platform="GTK, WPF" Value="Images/movies-icon.png"/>
                         <On Platform="UWP" Value="Assets/movies-icon.png"/>
                     </OnPlatform>
                 </Image.Source>

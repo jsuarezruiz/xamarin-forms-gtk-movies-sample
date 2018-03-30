@@ -110,7 +110,7 @@
                             <Image.Source>
                                 <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android, iOS" Value="movies_opacity"/>
-                                    <On Platform="GTK" Value="Images/movies-opacity.png"/>
+                                    <On Platform="GTK, WPF" Value="Images/movies-opacity.png"/>
                                     <On Platform="UWP" Value="Assets/movies-opacity.png"/>
                                 </OnPlatform>
                             </Image.Source>
@@ -153,7 +153,7 @@
                                     <Image.Source>
                                         <OnPlatform x:TypeArguments="ImageSource">
                                             <On Platform="Android, iOS" Value="movies_cake"/>
-                                            <On Platform="GTK" Value="Images/movies-cake.png"/>
+                                            <On Platform="GTK, WPF" Value="Images/movies-cake.png"/>
                                             <On Platform="UWP" Value="Assets/movies-cake.png"/>
                                         </OnPlatform>
                                     </Image.Source>
@@ -213,7 +213,7 @@
                             <Image.Source>
                                 <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android, iOS" Value="movies_opacity"/>
-                                    <On Platform="GTK" Value="Images/movies-opacity.png"/>
+                                    <On Platform="GTK, WPF" Value="Images/movies-opacity.png"/>
                                     <On Platform="UWP" Value="Assets/movies-opacity.png"/>
                                 </OnPlatform>
                             </Image.Source>

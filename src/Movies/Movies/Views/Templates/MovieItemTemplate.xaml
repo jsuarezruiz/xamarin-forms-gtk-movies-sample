@@ -38,7 +38,7 @@
                     <ColumnDefinition.Width>
                         <OnPlatform x:TypeArguments="GridLength">
                             <On Platform="Android, iOS" Value="Auto"/>
-                            <On Platform="GTK" Value="200"/>
+                            <On Platform="GTK, WPF" Value="200"/>
                             <On Platform="UWP" Value="200"/>
                         </OnPlatform>
                     </ColumnDefinition.Width>
@@ -57,7 +57,7 @@
                 <Image.Style>
                     <OnPlatform x:TypeArguments="Style">
                         <On Platform="Android, iOS" Value="{StaticResource PhoneMovieImageStyle}"/>
-                        <On Platform="GTK" Value="{StaticResource MovieImageStyle}"/>
+                        <On Platform="GTK, WPF" Value="{StaticResource MovieImageStyle}"/>
                         <On Platform="UWP" Value="{StaticResource MovieImageStyle}"/>
                     </OnPlatform>
                 </Image.Style>

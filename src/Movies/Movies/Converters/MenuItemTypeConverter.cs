@@ -14,7 +14,7 @@ namespace Movies.Converters
             switch (menuItemType)
             {
                 case MenuItemType.Discover:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-discover.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-discover.png";
@@ -23,7 +23,7 @@ namespace Movies.Converters
                     else
                         return string.Empty;
                 case MenuItemType.Movies:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-movie.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-movie.png";
@@ -32,7 +32,7 @@ namespace Movies.Converters
                     else
                         return string.Empty;
                 case MenuItemType.TVShows:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-shows.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-shows.png";
@@ -41,7 +41,7 @@ namespace Movies.Converters
                     else
                         return string.Empty;
                 case MenuItemType.Upcoming:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-upcoming.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-upcoming.png";
@@ -50,7 +50,7 @@ namespace Movies.Converters
                     else
                         return string.Empty;
                 case MenuItemType.Favourites:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-favourites.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-favourites.png";
@@ -59,7 +59,7 @@ namespace Movies.Converters
                     else
                         return string.Empty;
                 case MenuItemType.Settings:
-                    if (Device.RuntimePlatform == Device.GTK)
+                    if (Device.RuntimePlatform == Device.GTK || Device.RuntimePlatform == Device.WPF)
                         return "Images/movies-settings.png";
                     else if (Device.RuntimePlatform == Device.UWP)
                         return "Assets/movies-settings.png";

@@ -37,7 +37,7 @@
                 <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="Android, iOS" Value="movies_circle"/>
-                        <On Platform="GTK" Value="Images/movies-circle.png"/>
+                        <On Platform="GTK, WPF" Value="Images/movies-circle.png"/>
                         <On Platform="UWP" Value="Assets/movies-circle.png"/>
                     </OnPlatform>
                 </Image.Source>

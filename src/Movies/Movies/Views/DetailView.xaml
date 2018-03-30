@@ -100,7 +100,7 @@
                             <Image.Source>
                                 <OnPlatform x:TypeArguments="ImageSource">
                                     <On Platform="Android, iOS" Value="movies_opacity"/>
-                                    <On Platform="GTK" Value="Images/movies-opacity.png"/>
+                                    <On Platform="GTK, WPF" Value="Images/movies-opacity.png"/>
                                     <On Platform="UWP" Value="Assets/movies-opacity.png"/>
                                 </OnPlatform>
                             </Image.Source>
@@ -194,14 +194,14 @@
                                 <Button.WidthRequest>
                                     <OnPlatform x:TypeArguments="x:Double">
                                         <On Platform="Android, iOS" Value="150"/>
-                                        <On Platform="GTK" Value="200"/>
+                                        <On Platform="GTK, WPF" Value="200"/>
                                         <On Platform="UWP" Value="200"/>
                                     </OnPlatform>
                                 </Button.WidthRequest>
                                 <Button.Image>
                                     <OnPlatform x:TypeArguments="FileImageSource">
                                         <On Platform="Android, iOS" Value="movies_web"/>
-                                        <On Platform="GTK" Value="Images/movies-web.png"/>
+                                        <On Platform="GTK, WPF" Value="Images/movies-web.png"/>
                                         <On Platform="UWP" Value="Assets/movies-web.png"/>
                                     </OnPlatform>
                                 </Button.Image>
@@ -214,14 +214,14 @@
                                 <Button.WidthRequest>
                                     <OnPlatform x:TypeArguments="x:Double">
                                         <On Platform="Android, iOS" Value="150"/>
-                                        <On Platform="GTK" Value="200"/>
+                                        <On Platform="GTK, WPF" Value="200"/>
                                         <On Platform="UWP" Value="200"/>
                                     </OnPlatform>
                                 </Button.WidthRequest>
                                 <Button.Image>
                                     <OnPlatform x:TypeArguments="FileImageSource">
                                         <On Platform="Android, iOS" Value="movies_web"/>
-                                        <On Platform="GTK" Value="Images/movies-web.png"/>
+                                        <On Platform="GTK, WPF" Value="Images/movies-web.png"/>
                                         <On Platform="UWP" Value="Assets/movies-web.png"/>
                                     </OnPlatform>
                                 </Button.Image>

@@ -9,7 +9,7 @@
     <ContentPage.Icon>
         <OnPlatform x:TypeArguments="FileImageSource">
             <On Platform="iOS" Value="movies_menu"/>
-            <On Platform="GTK" Value="Images/movies-menu.png"/>
+            <On Platform="GTK, WPF" Value="Images/movies-menu.png"/>
         </OnPlatform>
     </ContentPage.Icon>
     <ContentPage.Content>
