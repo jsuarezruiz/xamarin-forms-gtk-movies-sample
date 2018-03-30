@@ -61,7 +61,7 @@
 
 **Rebuild** the solution to get all neccesary **NuGet** packages.
 
-Access to **AppSettings.cs** file available in the Portable Class Library to introduce your TMDb APIs key.
+Access to **AppSettings.cs** file available in the .NET Standard Library to introduce your TMDb APIs key.
 
 Enjoy!
 
